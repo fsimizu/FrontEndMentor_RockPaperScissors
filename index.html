@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+
+  <header>
+    <img id="logo" src="./images/logo.svg" alt="logo">
+    <div class="score_container">
+      <div class="score_text">SCORE</div>
+      <div id="score_number">0</div>
+    </div>
+  </header>
+
+  <main>
+
+    <div id="buttons_container">
+      <!-- <img id="background_triangle" src="./images/bg-triangle.svg" alt=""> -->
+      <button class="button_container button_container_play paper_border" id="paper_container">
+        <img src="./images/icon-paper.svg" alt="">
+      </button>
+      <button class="button_container button_container_play scissors_border" id="scissors_container">
+        <img src="./images/icon-scissors.svg" alt="">
+      </button>
+      <button class="button_container button_container_play rock_border" id="rock_container">
+        <img src="./images/icon-rock.svg" alt="">
+      </button>
+    </div>
+
+
+    <div id="result_container">
+      
+      <div class="result_buttons">
+        
+        <div class="result_with_label">
+          <div id="my_winner_container">
+            <div id=my_play_container class="button_container">
+              <img id="my_play_img" alt="my play">
+            </div>
+          </div>
+          <div class="result_label">YOU PICKED</div>
+        </div>
+
+        <div class="result_with_label">
+          <div id=house_play_placeholder></div>
+          <div id="house_winner_container">
+            <div id=house_play_container class="button_container">
+              <img id="house_play_img" alt="house play">
+            </div>
+          </div>
+          <div class="result_label">THE HOUSE PICKED</div>
+        </div>
+        
+      </div>
+
+      <div class="result_text_container">
+        <div id="result_text"></div>
+        <button onclick="playAgain()" id="result_play_again">PLAY AGAIN</button>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    <button onclick="openRules()" class="rules_btn">RULES</button>
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.linkedin.com/in/fsimizu/">Fernando Simizu</a>.
+    </div> -->
+  </footer>
+
+
+  <section id="rules_overlay">
+    <div class="rules_box">
+      <h1>RULES</h1>
+      <img src="./images/image-rules.svg" alt="">
+      <a onclick="closeRules()">&#10006;</a>
+    </div>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+
+
+
+</html>
